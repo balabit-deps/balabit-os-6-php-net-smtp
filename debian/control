@@ -1,0 +1,23 @@
+Source: php-net-smtp
+Section: php
+Priority: optional
+Maintainer: Debian PHP PEAR Maintainers <pkg-php-pear@lists.alioth.debian.org>
+Uploaders: Guillaume Delacour <gui@iroqwa.org>, Thomas Goirand <zigo@debian.org>
+Build-Depends: debhelper (>= 9), pkg-php-tools, php-net-socket
+Build-Depends-Indep: php-pear
+Standards-Version: 3.9.6
+Homepage: http://pear.php.net/package/Net_SMTP
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-php/php-net-smtp.git
+Vcs-Git: git://anonscm.debian.org/pkg-php/php-net-smtp.git
+
+Package: php-net-smtp
+Architecture: all
+Depends: ${misc:Depends}, ${phppear:Debian-Depends}
+Recommends: ${phppear:Debian-Recommends}
+Breaks: ${phppear:Debian-Breaks}
+Description: PHP PEAR module implementing SMTP protocol
+ ${phppear:description}
+ The php-net-smtp package supports the SMTP authentication standard (as defined
+ by RFC-2554) if you also install the php-auth-sasl package. Net_SMTP then
+ supports several authentication methods like DIGEST-MD5, CRAM-MD5, LOGIN and
+ PLAIN. 
